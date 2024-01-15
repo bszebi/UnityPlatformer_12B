@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
         float move = Input.GetAxis("Horizontal");
         animator.SetFloat("speed",Mathf.Abs(move));
         rigidbody2d.velocity = new(
-            x: move = maxSpeed,
+            x: move * maxSpeed,
             y:rigidbody2d.velocity.y);
         if((move > 0 && !isFacingRight) || (move < 0 && isFacingRight)) Flip();
 
