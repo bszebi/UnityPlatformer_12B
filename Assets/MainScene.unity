@@ -261,7 +261,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -334,10 +334,11 @@ Transform:
   m_GameObject: {fileID: 295833659}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.26, y: 2, z: 0}
+  m_LocalPosition: {x: -4.64, y: 1.85, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 422678894}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &295833666
@@ -353,6 +354,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 7
+  jumpHeight: 375
+  GroundChecker: {fileID: 422678894}
+  GroundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!1 &422678893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 422678894}
+  m_Layer: 0
+  m_Name: CheckGround
+  m_TagString: Untagged
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &422678894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422678893}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.38, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 295833665}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &506048494
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,7 +661,7 @@ GameObject:
   - component: {fileID: 1737036378}
   - component: {fileID: 1737036377}
   - component: {fileID: 1737036376}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ShortPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -737,7 +774,7 @@ Transform:
   m_GameObject: {fileID: 1737036375}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.3, y: -4.8, z: 0}
+  m_LocalPosition: {x: 6.23, y: -4.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -838,7 +875,7 @@ GameObject:
   - component: {fileID: 2134014817}
   - component: {fileID: 2134014816}
   - component: {fileID: 2134014815}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LongPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -967,11 +1004,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2508514582966812028, guid: 7e4ddf270d2ed174ebc3d5328d017a17, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.5
+      value: 3.28
       objectReference: {fileID: 0}
     - target: {fileID: 2508514582966812028, guid: 7e4ddf270d2ed174ebc3d5328d017a17, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.4
+      value: -4.43
       objectReference: {fileID: 0}
     - target: {fileID: 2508514582966812028, guid: 7e4ddf270d2ed174ebc3d5328d017a17, type: 3}
       propertyPath: m_LocalPosition.z
